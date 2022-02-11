@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Elder Futhark';
+    src: url('extras/elder_futhark/RUNE.TTF');
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Imprint MT Shadow';
+}
+
+a{
+    text-decoration: none; /* Tira o sublinhado de todos a  */
+    color: inherit
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 60px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: #3686cd;
+    color: #1e3b55;
+    border-radius: 5px;
+    transition: background 500ms ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: #1e3b55;
+    color: #3686cd;
+}
+
+.headline{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    word-break: break-all;
+}
+
+/* Navbar */
+#navbar{
+    width: 100%;
+    background: #3686cd;
+    color: #1e3b55;
+    height: 80px;
+    position: fixed;
+}
+
+#navbar-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.gowlogo{
+    width: 160px;
+}
+
+#navbar-itens{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase; 
+}
+
+#navbar-itens li{
+    padding: 10px;
+}
+
+/* Showcase */
+#showcase{
+    height: 100vh; /* Ocupa toda visão do usuário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3686cd;
+    background: url('extras/imagens/GOWRG_Wallpapaper_KeyArt_Background_Desktop_4k.jpg') no-repeat center center/cover;
+
+    /* Overlay */
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+}
+
+#showcase-container{
+    text-align: center;
+}
+
+#showcase-container h2 {
+    font-size: 2.5rem;
+}
+
+#showcase-container p{
+    font-size: 1.2rem;
+    padding: 7px 0;
+}
+
+/* Plataformas */
+#sobre-jogo{
+    width: 100%;
+    background:#1e3b55;
+    color: #3686cd;
+    padding: 50px;
+}
+
+#plataformas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas que ocupa 1 fração da div total */
+    justify-items: center;
+    padding: 15px;
+}
+
+.plat{
+    display: inline-block;
+    width: 50%;
+}
+
+#visao{
+    width: 100%;
+    background:#3686cd;
+    color: #1e3b55;
+    padding: 50px;
+}
+
+#visao-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 50px;
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    background:#1e3b55;
+    color: #3686cd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.sobre p{
+    text-align: justify;
+}
+
+.sobre-titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personagem{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+
+#produto{
+    width: 100%;
+    padding: 50px;
+    background: #1e3b55;
+    color: #3686cd;
+}
+
+#produto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itens{
+    width: 650px;
+}
+
+#itens .item{
+    display: flex;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.item i{
+    padding: 10px;
+}
+
+.kratos{
+    width: 50%;
+}
+
+.dev{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #1e3b55;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+#devs{
+    width: 100%;
+    background: #3686cd;
+    padding: 50px;
+    color: #1e3b55;
+}
+
+#devs-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #3686cd;
+}
+
+.dev .dev-image{
+    height: 200px;
+    width: auto;
+    margin: 15px;
+}
+
+#galeria{
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    background: #1e3b55;
+    color: #3686cd;
+}
+
+#galeria-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.galeria-imagens{
+    display: inline-block;
+    width: 640px;
+    height: 360px;
+    border-radius: 5px;
+}
+
+#footer{
+    background: #3686cd;
+    color: #1e3b55;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Zoom 125% */
+@media screen and (max-width: 2070px) {
+    #galeria-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Zoom 200% */
+@media screen and (max-width: 1400px) {
+    #galeria-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* Zoom 250% */
+@media screen and (max-width: 1050px) {
+    #visao-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+}
+
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1e3b55;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color:#3686cd;
+    border-radius: 20px;
+    border: 3px solid #1e3b55;
+}
