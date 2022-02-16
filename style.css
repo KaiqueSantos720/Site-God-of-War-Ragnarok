@@ -285,6 +285,10 @@ a{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 50px;
     }
+
+    .headline{
+        font-size: 1.4rem;
+    }
 }
 
 
