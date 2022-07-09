@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Imprint MT Shadow';
+    scroll-behavior: smooth;
 }
 
 a{
@@ -26,13 +27,20 @@ a{
     background: #3686cd;
     color: #1e3b55;
     border-radius: 5px;
-    transition: background 500ms ease;
+    position: relative;
+    border: 2px solid #1e3b55;
+    transition: all 0.5s ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .btn:hover{
     cursor: pointer;
     background: #1e3b55;
     color: #3686cd;
+    border: 2px solid #3686cd;
 }
 
 .headline{
@@ -51,6 +59,7 @@ a{
     color: #1e3b55;
     height: 80px;
     position: fixed;
+    z-index: 99;
 }
 
 #navbar-container{
@@ -78,6 +87,25 @@ a{
 
 #navbar-itens li{
     padding: 10px;
+}
+
+#navbar-itens a{
+    position: relative;
+}
+
+#navbar-itens a::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #1e3b55;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#navbar-itens a:hover::after{
+    width: 100%;
 }
 
 /* Showcase */
@@ -112,7 +140,7 @@ a{
     width: 100%;
     background:#1e3b55;
     color: #3686cd;
-    padding: 50px;
+    padding: 80px;
 }
 
 #plataformas{
@@ -166,7 +194,13 @@ a{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(1);
+}
+
+.personagem:hover{
     border-radius: 50%;
+    filter: none;
 }
 
 
@@ -237,7 +271,7 @@ a{
 #galeria{
     width: 100%;
     margin: auto;
-    padding: 50px;
+    padding: 80px;
     background: #1e3b55;
     color: #3686cd;
 }
@@ -254,6 +288,13 @@ a{
     width: 640px;
     height: 360px;
     border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.galeria-imagens:hover{
+    transform: scale(1.1);
+    border: 2px solid #3686cd;
+    border-radius: 20px;
 }
 
 #footer{
